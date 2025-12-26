@@ -1,7 +1,6 @@
 """
 Router para abrir navegador con perfil persistente usando userDataDir de Chromium.
 Todas las sesiones (cookies, localStorage, sessionStorage, etc.) se guardan automáticamente.
-Además, exporta storageState a .auth/ para compatibilidad con workers.
 """
 from fastapi import APIRouter, HTTPException
 from pathlib import Path
@@ -13,94 +12,6 @@ TRAFICO_ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(TRAFICO_ROOT / "src"))
 
 router = APIRouter()
-
-# Mapeo de dominios a nombres de plataformas
-PLATFORM_DOMAINS = {
-    'kams.com': 'kams',
-    'xxxfollow.com': 'xxxfollow',
-    'fikfap.com': 'fikfap',
-    'myclub.com': 'myclub',
-    'fansly.com': 'fansly',
-    'onlyfans.com': 'onlyfans',
-}
-
-async def export_storage_state_to_auth(modelo_id: str, user_data_dir: str):
-    """
-    Exporta storageState desde browser_profile a .auth/ para todas las plataformas conocidas.
-    Esto permite que los workers usen las sesiones guardadas.
-    
-    Estrategia: Exporta el storageState completo para todas las plataformas conocidas.
-    Si una plataforma no tiene sesión, el archivo se crea igual pero estará vacío.
-    Los workers verificarán si existe y si tiene datos válidos.
-    """
-    try:
-        MODELOS_DIR = TRAFICO_ROOT / "modelos"
-        modelo_dir = MODELOS_DIR / modelo_id
-        auth_dir = modelo_dir / ".auth"
-        auth_dir.mkdir(parents=True, exist_ok=True)
-        
-        # Crear un contexto temporal para leer el storageState
-        async with async_playwright() as p:
-            # Abrir contexto persistente temporalmente solo para leer
-            context = await p.chromium.launch_persistent_context(
-                user_data_dir,
-                headless=True,  # Headless para solo leer
-            )
-            
-            # Obtener storageState completo
-            storage_state = await context.storage_state()
-            
-            # Detectar plataformas desde las cookies y localStorage
-            detected_platforms = set()
-            cookies = storage_state.get('cookies', [])
-            origins = storage_state.get('origins', [])
-            
-            # Detectar por cookies
-            for cookie in cookies:
-                domain = cookie.get('domain', '')
-                for platform_domain, platform_name in PLATFORM_DOMAINS.items():
-                    if platform_domain in domain:
-                        detected_platforms.add(platform_name)
-            
-            # Detectar por origins (localStorage/sessionStorage)
-            for origin in origins:
-                origin_url = origin.get('origin', '')
-                for platform_domain, platform_name in PLATFORM_DOMAINS.items():
-                    if platform_domain in origin_url:
-                        detected_platforms.add(platform_name)
-            
-            # Exportar para todas las plataformas detectadas
-            if detected_platforms:
-                import json
-                for platform in detected_platforms:
-                    auth_file = auth_dir / f"{platform}.json"
-                    with open(auth_file, 'w', encoding='utf-8') as f:
-                        json.dump(storage_state, f, indent=2, ensure_ascii=False)
-                    file_size = auth_file.stat().st_size
-                    print(f"✅ StorageState exportado para {platform}: {auth_file} ({file_size} bytes)")
-            
-            # Si no detectamos ninguna plataforma, exportar para las principales por defecto
-            # Esto es útil si el usuario hizo login pero no detectamos la plataforma
-            if not detected_platforms:
-                import json
-                # Exportar para las plataformas más comunes
-                default_platforms = ['kams', 'xxxfollow']
-                for platform in default_platforms:
-                    auth_file = auth_dir / f"{platform}.json"
-                    with open(auth_file, 'w', encoding='utf-8') as f:
-                        json.dump(storage_state, f, indent=2, ensure_ascii=False)
-                    file_size = auth_file.stat().st_size
-                    if file_size > 100:  # Solo mostrar si tiene contenido significativo
-                        print(f"✅ StorageState exportado (por defecto) para {platform}: {auth_file} ({file_size} bytes)")
-                    else:
-                        print(f"ℹ️  Archivo creado para {platform} pero sin sesión activa: {auth_file}")
-            
-            await context.close()
-            
-    except Exception as e:
-        print(f"⚠️  Error exportando storageState (no crítico): {e}")
-        import traceback
-        print(traceback.format_exc())
 
 @router.post("/navegador/abrir/{modelo_id}")
 async def abrir_navegador(modelo_id: str):
@@ -181,10 +92,6 @@ async def abrir_navegador(modelo_id: str):
                             print(f"⚠️ Error cerrando context (no crítico): {close_error}")
                     
                     print(f"📋 Sesiones persistentes guardadas en el perfil del navegador")
-                    
-                    # Exportar storageState a .auth/ para compatibilidad con workers
-                    print(f"🔄 Exportando storageState a .auth/ para workers...")
-                    await export_storage_state_to_auth(modelo_id, user_data_dir)
                         
             except Exception as e:
                 print(f"❌ Error en run_browser: {e}")

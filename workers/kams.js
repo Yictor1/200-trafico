@@ -11,8 +11,8 @@ if (!MODEL_NAME) {
   throw new Error('❌ ERROR: Debes especificar el modelo. Ejemplo: MODEL_NAME=yic npx playwright test ...');
 }
 
-// Ruta específica por modelo: Trafico/modelos/{modelo}/.auth/kams.json
-const authFile = path.join(__dirname, `../modelos/${MODEL_NAME}/.auth/kams.json`);
+// Ruta específica por modelo: Trafico/modelos/{modelo}/.auth/user.json
+const authFile = path.join(__dirname, `../modelos/${MODEL_NAME}/.auth/user.json`);
 
 console.log(`🔐 Usando archivo de autenticación para ${MODEL_NAME}: ${authFile}`);
 

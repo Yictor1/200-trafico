@@ -1,9 +1,83 @@
-node_modules/
-__pycache__/
-*.pyc
+# Entorno virtual
+.venv/
+venv/
+env/
+ENV/
+
+# Archivos de credenciales y configuración sensible
+credenciales.json
 .env
+*.key
+*.pem
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Archivos de configuración del sistema
 .DS_Store
-.venv
-venv
-.idea
-.vscode
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Archivos temporales
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de base de datos
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos de configuración local
+config.local.py
+settings.local.py
+
+# Perfiles de navegador (Playwright/Chromium)
+modelos/*/browser_profile/
+**/browser_profile/
+
+# Archivos de video y media grandes
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Archivos de captura temporales
+captures/*.json
+!captures/.gitkeep
+
+# Archivos de test results
+test-results/
+
+node_modules/

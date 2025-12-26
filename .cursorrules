@@ -1,0 +1,97 @@
+# Reglas de Cursor para 100-Tráfico
+# Sistema de desarrollo asistido con PRDs y agentes especializados
+
+## Contexto del Sistema
+Lee siempre estos archivos antes de comenzar:
+- `vibe/system.context.md` - Personalidad técnica del sistema
+- `vibe/router.md` - Router de intención para clasificar tareas
+- `vibe/readme.md` - Documentación completa del sistema
+
+## Carpetas Importantes (Contexto)
+Incluye siempre en el contexto:
+- `vibe/` - Sistema de PRDs, agentes y reglas
+- `admin_panel/backend/` - API FastAPI
+- `admin_panel/frontend/src/` - Frontend Next.js
+- `src/` - Código fuente principal (bot, scheduler, caption)
+- `workers/` - Workers Playwright para automatización
+
+## Carpetas a Ignorar
+- `node_modules/`
+- `.git/`
+- `.venv/`
+- `__pycache__/`
+- `*.log`
+
+## Reglas Principales
+
+### 1. PRD Obligatorio
+**ANTES de escribir código para nuevas features:**
+- Usa el router (`vibe/router.md`) para detectar la intención
+- Activa el PRD correspondiente en `vibe/prompt/prd/`
+- Activa el agente especializado en `vibe/agents/`
+- Genera el PRD completo con todas las secciones
+- Solo después de aprobación, implementa el código
+
+**Ejemplo:**
+Usuario: "quiero un worker para Fansly"
+→ Router detecta: worker automation
+→ PRD: `vibe/prompt/prd/worker.md`
+→ Agente: `vibe/agents/worker_agent.md`
+→ Preguntas guiadas → PRD final → Implementación
+
+### 2. Uso de Agentes Especializados
+Para tareas complejas, usa los agentes:
+- `worker_agent.md` - Automatización Playwright
+- `api_agent.md` - Endpoints FastAPI
+- `ui_agent.md` - Componentes Next.js
+- `db_agent.md` - Modelos Supabase
+- `refactor_agent.md` - Limpieza y optimización
+- `prd_agent.md` - Generación de PRDs
+
+### 3. Ediciones Estructuradas
+- **Nunca edites más de 3 archivos sin plan**
+- Antes de cambios grandes, explica el impacto
+- Pregunta por confirmación si afecta múltiples módulos
+
+### 4. Protección de Arquitectura
+Al crear o modificar:
+- **Backend**: respeta `admin_panel/backend/api/` (routers) + servicios
+- **Frontend**: respeta `admin_panel/frontend/src/features/` (componentes, hooks, services)
+- **Workers**: siempre en `workers/`
+- **Bot/Scheduler**: en `src/project/`
+- **KPIs**: en `kpi_stripchat/`
+
+### 5. Consulta de Documentación
+Antes de sugerir cambios:
+- Lee `vibe/prompt/instructions/architecture.md`
+- Consulta `vibe/prompt/meta/memory.md` para decisiones previas
+- Revisa `vibe/prompt/meta/project_scope.md` para alcance
+
+## Flujo de Trabajo Recomendado
+
+1. **Usuario expresa idea** → Router detecta intención
+2. **Router selecciona PRD** → Activa agente correspondiente
+3. **Agente hace preguntas** → Genera PRD completo
+4. **PRD aprobado** → Implementación en Cursor
+5. **Código respeta arquitectura** → Sin romper módulos existentes
+
+## Convenciones
+
+- **Python**: type hints, docstrings, logging
+- **TypeScript**: tipos estrictos, interfaces claras
+- **Estructura**: modular, separación de concerns
+- **Testing**: preferible pero no obligatorio para MVP
+
+## Notas Importantes
+
+- El sistema `vibe/` es el "sistema operativo" del proyecto
+- No hay feature sin PRD
+- No hay código sin intención explícita
+- Mantén consistencia con decisiones arquitectónicas previas
+
+
+
+
+
+
+
