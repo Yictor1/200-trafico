@@ -1,0 +1,24 @@
+# Configuración sudoers para 100-Tráfico
+# Permite ejecutar chmod y chown sin contraseña solo en directorio específico
+# 
+# Instalación:
+# sudo visudo -f /etc/sudoers.d/100trafico
+# O ejecutar: sudo bash -c 'cat > /etc/sudoers.d/100trafico' < este_archivo
+#
+# Verificar sintaxis:
+# sudo visudo -c
+#
+# IMPORTANTE: Este archivo debe tener permisos 0440
+# sudo chmod 0440 /etc/sudoers.d/100trafico
+
+# Permitir chmod en archivos del directorio de Telegram Bot API
+victor ALL=(ALL) NOPASSWD: /usr/bin/chmod * /home/victor/.telegram-bot-api/*
+
+# Permitir chown en archivos del directorio de Telegram Bot API
+victor ALL=(ALL) NOPASSWD: /usr/bin/chown * /home/victor/.telegram-bot-api/*
+
+# Nota de seguridad:
+# - Solo afecta archivos en /home/victor/.telegram-bot-api/
+# - No permite otros comandos sudo
+# - No afecta otros directorios del sistema
+

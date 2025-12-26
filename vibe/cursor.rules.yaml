@@ -1,0 +1,43 @@
+version: 1
+
+# Qué carpetas ignorar
+ignore:
+  - node_modules/
+  - .git/
+  - .venv/
+  - __pycache__/
+  - *.log
+
+# Carpetas importantes
+context:
+  - vibe/
+  - admin_panel/backend/
+  - admin_panel/frontend/src/
+  - src/
+  - workers/
+
+# Reglas
+rules:
+  - id: require_prd
+    description: Toda feature debe tener un PRD aprobado antes de escribir código.
+    match: "add feature"
+    run: |
+      Antes de implementar esta feature, crea un PRD en `vibe/prompt/prd/` usando el router.
+
+  - id: prefer_agents
+    description: Usa agentes para tareas complejas.
+    match: ["refactor", "migrate", "worker", "kpi", "scraping"]
+    run: |
+      Usa el agente correspondiente dentro de `vibe/agents/`.
+
+  - id: structured_edits
+    description: Nunca edites más de 3 archivos sin plan.
+    match: "edit"
+    run: |
+      Pregunta por confirmación y explica el impacto de los cambios.
+
+  - id: enforce_architecture
+    description: Protege la arquitectura del proyecto.
+    match: ["api", "router", "service", "component"]
+    run: |
+      Asegúrate de que la estructura de carpetas se respete al crear o mover archivos.

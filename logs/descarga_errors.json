@@ -1,0 +1,134 @@
+[
+  {
+    "timestamp": "2025-12-26T03:42:26.018217+00:00",
+    "modelo": "unknown",
+    "video": "unknown",
+    "error_type": "permisos",
+    "error_message": "ERROR:__main__:❌ Error al copiar archivo: [Errno 13] Permission denied: '/home/victor/.telegram-bot-api/7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/videos/file_9.mp4'",
+    "accion": "detectado",
+    "estado": "pendiente",
+    "intento": 1,
+    "max_intentos": 3
+  },
+  {
+    "timestamp": "2025-12-26T03:42:26.018217+00:00",
+    "modelo": "unknown",
+    "video": "unknown",
+    "error_type": "permisos",
+    "error_message": "ERROR:__main__:❌ Error al copiar archivo: [Errno 13] Permission denied: '/home/victor/.telegram-bot-api/7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/videos/file_9.mp4'",
+    "accion": "detectado",
+    "estado": "solucionado",
+    "intento": 1,
+    "max_intentos": 3
+  },
+  {
+    "timestamp": "2025-12-26T03:49:14.068486+00:00",
+    "modelo": "unknown",
+    "video": "unknown",
+    "error_type": "ruta_inexistente",
+    "error_message": "ERROR:__main__:❌ Error al copiar: [Errno 2] No such file or directory: 'https://api.telegram.org/file/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss//home/victor/.telegram-bot-api/7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/videos/file_11.mp4'",
+    "accion": "detectado",
+    "estado": "pendiente",
+    "intento": 1,
+    "max_intentos": 3
+  },
+  {
+    "timestamp": "2025-12-26T03:49:14.068486+00:00",
+    "modelo": "unknown",
+    "video": "unknown",
+    "error_type": "ruta_inexistente",
+    "error_message": "ERROR:__main__:❌ Error al copiar: [Errno 2] No such file or directory: 'https://api.telegram.org/file/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss//home/victor/.telegram-bot-api/7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/videos/file_11.mp4'",
+    "accion": "detectado",
+    "estado": "solucionado",
+    "intento": 1,
+    "max_intentos": 3
+  },
+  {
+    "timestamp": "2025-12-26T03:49:14.072184+00:00",
+    "modelo": "unknown",
+    "video": "unknown",
+    "error_type": "ruta_inexistente",
+    "error_message": "FileNotFoundError: [Errno 2] No such file or directory: 'https://api.telegram.org/file/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss//home/victor/.telegram-bot-api/7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/videos/file_11.mp4'",
+    "accion": "detectado",
+    "estado": "pendiente",
+    "intento": 1,
+    "max_intentos": 3
+  },
+  {
+    "timestamp": "2025-12-26T03:49:14.072184+00:00",
+    "modelo": "unknown",
+    "video": "unknown",
+    "error_type": "ruta_inexistente",
+    "error_message": "FileNotFoundError: [Errno 2] No such file or directory: 'https://api.telegram.org/file/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss//home/victor/.telegram-bot-api/7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/videos/file_11.mp4'",
+    "accion": "detectado",
+    "estado": "solucionado",
+    "intento": 1,
+    "max_intentos": 3
+  },
+  {
+    "timestamp": "2025-12-26T03:50:55.076169+00:00",
+    "modelo": "unknown",
+    "video": "unknown",
+    "error_type": "permisos",
+    "error_message": "ERROR:__main__:❌ Error de permisos: [Errno 13] Permission denied: '/home/victor/.telegram-bot-api/7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/videos/file_12.mp4'",
+    "accion": "detectado",
+    "estado": "pendiente",
+    "intento": 1,
+    "max_intentos": 3
+  },
+  {
+    "timestamp": "2025-12-26T03:50:55.076169+00:00",
+    "modelo": "unknown",
+    "video": "unknown",
+    "error_type": "permisos",
+    "error_message": "ERROR:__main__:❌ Error de permisos: [Errno 13] Permission denied: '/home/victor/.telegram-bot-api/7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/videos/file_12.mp4'",
+    "accion": "detectado",
+    "estado": "solucionado",
+    "intento": 1,
+    "max_intentos": 3
+  },
+  {
+    "timestamp": "2025-12-26T03:50:55.078282+00:00",
+    "modelo": "unknown",
+    "video": "unknown",
+    "error_type": "permisos",
+    "error_message": "ERROR:__main__:   Ejecuta: sudo chmod -R 777 ~/.telegram-bot-api",
+    "accion": "detectado",
+    "estado": "pendiente",
+    "intento": 1,
+    "max_intentos": 3
+  },
+  {
+    "timestamp": "2025-12-26T03:50:55.078282+00:00",
+    "modelo": "unknown",
+    "video": "unknown",
+    "error_type": "permisos",
+    "error_message": "ERROR:__main__:   Ejecuta: sudo chmod -R 777 ~/.telegram-bot-api",
+    "accion": "detectado",
+    "estado": "solucionado",
+    "intento": 1,
+    "max_intentos": 3
+  },
+  {
+    "timestamp": "2025-12-26T03:50:55.081726+00:00",
+    "modelo": "unknown",
+    "video": "unknown",
+    "error_type": "permisos",
+    "error_message": "PermissionError: [Errno 13] Permission denied: '/home/victor/.telegram-bot-api/7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/videos/file_12.mp4'",
+    "accion": "detectado",
+    "estado": "pendiente",
+    "intento": 1,
+    "max_intentos": 3
+  },
+  {
+    "timestamp": "2025-12-26T03:50:55.081726+00:00",
+    "modelo": "unknown",
+    "video": "unknown",
+    "error_type": "permisos",
+    "error_message": "PermissionError: [Errno 13] Permission denied: '/home/victor/.telegram-bot-api/7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/videos/file_12.mp4'",
+    "accion": "detectado",
+    "estado": "solucionado",
+    "intento": 1,
+    "max_intentos": 3
+  }
+]

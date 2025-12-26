@@ -1,0 +1,37 @@
+=== Inicio de sesión: 2025-12-25 22:59:37 ===
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/getMe "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/deleteWebhook "HTTP/1.1 200 OK"
+INFO:telegram.ext.Application:Application started
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/getUpdates "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/getUpdates "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/sendMessage "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/getUpdates "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/answerCallbackQuery "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/editMessageText "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/getUpdates "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/sendMessage "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/getFile "HTTP/1.1 200 OK"
+INFO:__main__:🔍 DEBUG: file_path=https://api.telegram.org/file/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss//var/lib/telegram-bot-api/7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/videos/file_16.mp4
+INFO:__main__:🔍 DEBUG: file_size=5665533
+INFO:__main__:📥 Copiando desde: /home/victor/.telegram-bot-api/7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/videos/file_16.mp4
+WARNING:__main__:⚠️ Error de permisos detectado, aplicando fix automático...
+INFO:__main__:✅ Archivo copiado exitosamente después de fix: 5665533 bytes
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/sendMessage "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/getUpdates "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/answerCallbackQuery "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/editMessageText "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/getUpdates "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/answerCallbackQuery "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/editMessageText "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/getUpdates "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/answerCallbackQuery "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/editMessageText "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/getUpdates "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/answerCallbackQuery "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/editMessageText "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://osdpemjvcsmfbacmjlcv.supabase.co/rest/v1/modelos?select=id&nombre=eq.yic "HTTP/2 200 OK"
+ERROR:database.contenidos_prd:❌ Modelo 'yic' no existe en tabla modelos
+ERROR:__main__:❌ No se pudo crear contenido para modelos/yic/20251225_230006_0fb6dc.mp4
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/editMessageText "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/getUpdates "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: POST http://127.0.0.1:8081/bot7999451150:AAGxT5zT3T5Y8uJ6lr6yJJt87-FQY9sbNss/getUpdates "HTTP/1.1 200 OK"

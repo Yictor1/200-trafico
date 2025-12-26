@@ -1,0 +1,45 @@
+═══════════════════════════════════════════════════════════════
+  INSTALACIÓN DE DOCKER Y CONFIGURACIÓN DEL SERVIDOR LOCAL
+═══════════════════════════════════════════════════════════════
+
+PASO 1: Instalar Docker
+───────────────────────
+Ejecuta en tu terminal:
+
+    cd /home/victor/Escritorio/SkyFlow_Porn-master/100-trafico
+    ./scripts/install_docker_auto.sh
+
+Esto instalará Docker y te pedirá tu contraseña de sudo.
+
+PASO 2: Activar grupo Docker
+────────────────────────────
+Después de la instalación, ejecuta:
+
+    newgrp docker
+
+O cierra sesión y vuelve a iniciar sesión.
+
+PASO 3: Verificar Docker
+─────────────────────────
+    docker --version
+    docker ps
+
+PASO 4: Iniciar servidor local de Telegram Bot API
+───────────────────────────────────────────────────
+    ./scripts/start_local_bot_api.sh
+
+PASO 5: Verificar que funciona
+───────────────────────────────
+    curl http://localhost:8081
+
+Deberías ver una respuesta del servidor.
+
+PASO 6: Iniciar el bot
+───────────────────────
+    source .venv/bin/activate
+    python3 main.py
+
+Deberías ver:
+    🌐 Usando servidor local de Bot API: http://localhost:8081
+
+═══════════════════════════════════════════════════════════════
